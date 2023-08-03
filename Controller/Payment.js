@@ -7,7 +7,7 @@ const payment = async (req, res) => {
     const payment = await stripe.paymentIntents.create({
       amount,
       currency: "INR",
-      description: "Spatula company",
+      description: "RichPanel",
       payment_method: id,
       confirm: true,
     });
