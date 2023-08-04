@@ -13,12 +13,11 @@ mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("DATABASE CONNECTED");
+    app.listen(4000, (req, res) => {
+      console.log("Server is running");
+    });
   })
   .catch((err) => {
     console.log("DATABASE NOT CONNECTED");
     console.log(err);
   });
-
-app.listen(4000, (req, res) => {
-  console.log("Server is running");
-});
